@@ -9,11 +9,7 @@ const QuotesContainer = () =>{
         return Math.floor(Math.random() * (Quotes.quotes.length - 0)) + 0
 
     }
-    const cambiar = () => {
-       return console.log("puej si llega")
-		return document.getElementById('body').style.backgroundColor = 'red';
-       
-	}
+   
 
         
         const [quote, setQuote] =  useState(Quotes.quotes[numAleatorio()]); 
@@ -28,7 +24,7 @@ const QuotesContainer = () =>{
             <button className="boton" onClick = {() => setQuote(Quotes.quotes[numAleatorio()]) }>click me</button>
             </div>
             <div className="margin">
-            <a className="boton" href={`https://twitter.com/intent/tweet?text=${quote.quote}%20by%20${quote.author}`} target="_blank">Twittear</a>
+            <a className="boton" href={`https://twitter.com/intent/tweet?text=${quote.quote}%20by%20${quote.author}`} rel = "noreferrer">Twittear</a>
             </div>
        </div>
 
